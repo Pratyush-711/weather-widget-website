@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.45);
+}
+
+/* Rain animation keyframe */
+@keyframes rain-drip {
+  0% { transform: translateY(-10px); opacity: 0; }
+  50% { opacity: 0.6; }
+  100% { transform: translateY(120px); opacity: 0; }
+}
+
+.rain-drop {
+  animation: rain-drip 1.2s infinite linear;
+}
+
+/* Cloud translation */
+@keyframes cloud-drift {
+  0% { transform: translateX(-10%); }
+  50% { transform: translateX(10%); }
+  100% { transform: translateX(-10%); }
+}
+
+.cloud-drift-slow {
+  animation: cloud-drift 24s infinite ease-in-out;
+}
+
+.cloud-drift-fast {
+  animation: cloud-drift 12s infinite ease-in-out;
+}
+
+/* Sun glow pulse */
+@keyframes sun-pulse {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+  50% { transform: scale(1.08) rotate(180deg); opacity: 1; }
+}
+
+.sun-glow {
+  animation: sun-pulse 8s infinite ease-in-out;
+}
+

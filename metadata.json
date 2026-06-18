@@ -1,0 +1,6 @@
+{
+  "name": "Weather Widget Website",
+  "description": "A modern, responsive weather dashboard with real-time conditions, 5-day forecasts, hourly trends, and AI-powered weather insights.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
